@@ -5,7 +5,7 @@
 #     return {"message": 'Hello World to LFH and Alex!'}
 
 from fastapi import FastAPI
-from database import engine
+from .database import engine
 import models
 from routers import posts, users, auth, vote
 from fastapi.middleware.cors import CORSMiddleware
