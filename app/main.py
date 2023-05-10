@@ -6,10 +6,12 @@
 
 from fastapi import FastAPI
 from .database import engine
-import models
-from routers import posts, users, auth, vote
+from app import models
+from .routers import posts, users, auth, vote
 from fastapi.middleware.cors import CORSMiddleware
 
+# not needed any more if support alembic
+# tell the sqlalchemy to run CREATE statement to generate all the tables
 # models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
